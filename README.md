@@ -44,7 +44,7 @@ More infos about TensorBase FE will be provided gradually.
 |------|--------------------------------| ----------------------- | -------------------------- |
 |SELECT sum(number) FROM system.numbers | 28.6 sec / 279.4 GB/s   |  0.027 sec / ~ | 1059x |
 |SELECT max(number) FROM system.numbers | 51.9 sec / 154.0 GB/s   |  0.027 sec / ~ |  1922x |
-|SELECT max(123*number+456*number+789*number) FROM system.numbers | 303.363 sec / 26.37 GB/s |  0.028 sec / ~ | 10833x |
+|SELECT max(123\*number+456\*number+789\*number) FROM system.numbers | 303.363 sec / 26.37 GB/s |  0.028 sec / ~ | 10833x |
 
 Note:
 * Use table system.numbers_mt in ClickHouse, system.numbers in TensorBase FE
