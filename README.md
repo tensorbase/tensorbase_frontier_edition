@@ -35,7 +35,7 @@ More infos about TensorBase FE will be provided gradually.
  
 <br/>
 
-#### Performance #0 - system.numbers
+### Performance #0 - system.numbers
 ------------------------------------
 
 * Dataset: 1000,000,000,000 (1 Trillion or 1000 Billion)
@@ -50,8 +50,9 @@ Note:
 * Use table system.numbers_mt in ClickHouse, system.numbers in TensorBase FE
 * In ClickHouse, system.numbers is a kind of virtual table to represent the natural number dataset. The measurements for system.numbers/numbers_mt makes no senses for the real world, but still uncovers the unique of TensorBase. And you may accidentally meet some other compares this kind non-senses, here you seen, TensorBase also has and run in a tiny constant time.  
 
+<br/>
 
-#### Performance #1 - medium dataset
+### Performance #1 - medium dataset
 ------------------------------------
 
 ClickHouse create table script:
@@ -86,7 +87,9 @@ PARTITION BY toYYYYMM(pickup_datetime)
 |select toYear(pickup_datetime), sum(trip_id) from trips_lite_n10m group by toYear(pickup_datetime) order by toYear(pickup_datetime) | 0.041 sec |  0.031 sec | 1.3x |
 
 
-#### Performance #2 - big dataset
+<br/>
+
+### Performance #2 - big dataset
 ---------------------------------
 
 ClickHouse create table script:
@@ -123,14 +126,16 @@ PARTITION BY toYYYYMM(pickup_datetime)
 |Q#5|select toYYYYMM(pickup_datetime), sum(trip_id) from trips_lite WHERE trip_id > 100000 group by toYYYYMM(pickup_datetime) order by toYYYYMM(pickup_datetime) |  1.186 sec /  9.88 GB/s |  0.261 sec / 44.9 GB/s | 4.5x |
 
 
+<br/>
 
-#### Performance #3 - big dataset
+### Performance #3 - big dataset
 ----------------------------------
 
 * TPC-H Dataset 
 
 (Coming soon...)
 
+<br/>
 
 ## References
 -------------
