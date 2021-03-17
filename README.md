@@ -22,7 +22,8 @@ More infos about TensorBase FE will be provided gradually.
 
 ## Benchmarks
 
-### Reference
+#### Setup
+----------
 
 * Hardware: 1 Socket, Intel Xeon Platinum 8260, 24 cores / 48 hyperthreads, 6-channel DDR4-2400 ECC REG DRAMs
 * TensorBase Frontier Edition (2021.3.0.a) v.s. ClickHouse server v21.2.5.5-stable
@@ -32,8 +33,10 @@ More infos about TensorBase FE will be provided gradually.
 1. hardware under-utilization (if have) is a flaw for performance oriented systems
 2. performance degradation in higher threads (if have) is a flaw in actual concurrent production environment
  
+<br/>
 
-### Performance #0 - system.numbers
+#### Performance #0 - system.numbers
+------------------------------------
 
 * Dataset: 1000,000,000,000 (1 Trillion or 1000 Billion)
 
@@ -48,7 +51,8 @@ Note:
 * In ClickHouse, system.numbers is a kind of virtual table to represent the natural number dataset. The measurements for system.numbers/numbers_mt makes no senses for the real world, but still uncovers the unique of TensorBase. And you may accidentally meet some other compares this kind non-senses, here you seen, TensorBase also has and run in a tiny constant time.  
 
 
-### Performance #1 - medium dataset
+#### Performance #1 - medium dataset
+------------------------------------
 
 ClickHouse create table script:
 ```sql
@@ -82,7 +86,8 @@ PARTITION BY toYYYYMM(pickup_datetime)
 |select toYear(pickup_datetime), sum(trip_id) from trips_lite_n10m group by toYear(pickup_datetime) order by toYear(pickup_datetime) | 0.041 sec |  0.031 sec | 1.3x |
 
 
-### Performance #2 - big dataset
+#### Performance #2 - big dataset
+---------------------------------
 
 ClickHouse create table script:
 ```sql
@@ -119,8 +124,8 @@ PARTITION BY toYYYYMM(pickup_datetime)
 
 
 
-
-### Performance #3 - big dataset
+#### Performance #3 - big dataset
+----------------------------------
 
 * TPC-H Dataset 
 
@@ -128,6 +133,7 @@ PARTITION BY toYYYYMM(pickup_datetime)
 
 
 ## References
+-------------
 
 1. [Stripped NYC Taxi lite Dataset in CSV](/trips_lite_n10m.tar.xz)
 2. [Googling NYC Taxi Dataset](https://www.google.com/search?q=NYC+TAXI+Dataset)
