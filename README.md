@@ -4,7 +4,7 @@ New Bigdata Warehousing for SMEs (Small and Medium Enterprises)
 
 Read more about TensorBase Frontier Edition from the [website](https://tensorbase.io/).
 
-The alpha plan of TensorBase FE is in progress. If you are interesting to preview, go to the [website](https://tensorbase.io/) for free application.
+The alpha plan of TensorBase FE is in progress. If you are interested to preview, go to the [website](https://tensorbase.io/) for free application.
 
 An open source TensorBase Base Edition is also in progress. If you are a developer and interesting, go to the [TensorBase BE](https://github.com/tensorbase/tensorbase) project.
 
