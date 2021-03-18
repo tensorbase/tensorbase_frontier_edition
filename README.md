@@ -52,7 +52,7 @@ Note:
 
 <br/>
 
-### Performance #1 - medium dataset
+### Performance #1 - small or medium dataset
 ------------------------------------
 
 ClickHouse create table script:
